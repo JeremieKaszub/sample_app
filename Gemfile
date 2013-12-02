@@ -22,6 +22,7 @@ end
 group :test do
   gem 'rspec', '~>2.7.0'
   gem 'webrat', '0.7.1'
+  gem 'spork'
 end
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
