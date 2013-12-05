@@ -20,6 +20,9 @@ SampleApp::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  # Test solution stackoverflow fix heroku deploiement
+  config.assets.precompile += %w( blueprint/screen.css blueprint/print.css blueprint/ie.css )
+
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 

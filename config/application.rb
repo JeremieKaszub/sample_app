@@ -64,8 +64,6 @@ module SampleApp
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-
-    # Test fixation probleme heroku
-    config.assets.precompile += %w(screen.css)
+    
   end
 end
