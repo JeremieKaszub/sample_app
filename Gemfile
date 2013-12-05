@@ -7,6 +7,7 @@ gem 'rails', '3.2.13'
 
 #gem 'sqlite3'
 gem 'pg', '0.11.0'
+gem 'gravatar_image_tag', '1.0.0.pre2'
 
 
 # Gems used only for assets and not required
@@ -24,6 +25,7 @@ group :test do
   gem 'rspec', '~>2.7.0'
   gem 'webrat', '0.7.1'
   gem 'spork'
+  gem 'factory_girl_rails', '1.0'
 end
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes

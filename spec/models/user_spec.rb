@@ -118,6 +118,21 @@ describe User do
   			@user.has_password?("invalide").should be_false
   		end
   	end
+
+  	it "devrait retourner nul en cas d'inequation email/mot de passe" do
+  		wrong_pazssword_user = User.authenticate(@attr[:email], "wrongpass")
+  		wrong_pazssword_user.should be_nil
+  	end
+
+  	it "devrait retourner nul quand un email ne correspond a aucun utilisateur" do
+  		nonexistent_user = User.authenticate("bar@foo.com", @attr[:password])
+  		nonexistent_user.should be_nil
+  	end
+
+  	it "devrait retourner l'utilisateur si email/mot de passe correspondent" do
+  		matching_user = User.authenticate(@attr[:email], @attr[:password])
+  		matching_user.should == @user
+  	end
   end
 
 end
